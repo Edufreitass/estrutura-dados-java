@@ -45,6 +45,27 @@ public class Vetor {
 		return false;
 	}
 	
+	// 0 1 2 3 4 5 6 = tamanho é 5
+	// B C E F G + +
+	// overloading do metodo, usado para add um elemento em qualquer posicao
+	public boolean adiciona(int posicao, String elemento) {
+		// verificar se a posicao é valida
+		if (!(posicao >= 0 && posicao < tamanho)) {
+			throw new IllegalArgumentException("Posição inválida");
+		}
+		
+		// logica para mover os elementos
+		for (int i = this.tamanho - 1; i >=  posicao; i--) {
+			this.elementos[i + 1] = this.elementos[i];
+		}
+		
+		// atribuir o elemento para posicao
+		this.elementos[posicao] = elemento;
+		this.tamanho++;
+		
+		return true;
+	}
+	
 	// metodo de busca
 	public String busca(int posicao) {
 		// verifica se a posição é invalida ou null
