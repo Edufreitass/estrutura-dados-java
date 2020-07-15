@@ -1,7 +1,5 @@
 package com.loiane.estruturadados.vetor;
 
-import java.util.Arrays;
-
 public class Vetor {
 
 	private String[] elementos;
@@ -55,6 +53,16 @@ public class Vetor {
 		}
 		
 		return this.elementos[posicao];
+	}
+	
+	public int busca(String elemento) {
+		// verificar se o elemento existe ou não, fazer uma busca sequencial
+		for (int i = 0; i < this.tamanho; i++) {
+			if (this.elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
+		return -1;
 	}
 	
 	// retorna o tamanho do vetor
