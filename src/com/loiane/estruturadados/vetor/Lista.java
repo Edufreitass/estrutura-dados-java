@@ -77,7 +77,6 @@ public class Lista<T> {
 	// exercicio 02
 	public int ultimoIndice(T elemento) {
 		
-		int ultimaPos = -1;
 		for (int i = this.tamanho - 1; i >=0; i--) {
 			if (this.elementos[i].equals(elemento)) {
 				return i;
@@ -109,6 +108,14 @@ public class Lista<T> {
 		this.tamanho--;
 	}
 
+	// exercicio 03
+	public void remove(T elemento) {
+		 int pos = this.busca(elemento);
+		 if (pos > -1) {
+			 this.remove(pos);
+		 }
+	}
+	
 	public int tamanho() {
 		return this.tamanho;
 	}
