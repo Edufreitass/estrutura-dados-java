@@ -38,7 +38,7 @@ public class VetorObjetos {
 
 	private void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
-			Object[] elementosNovos = new String[this.elementos.length * 2];
+			Object[] elementosNovos = new Object[this.elementos.length * 2];
 			for (int i = 0; i < this.elementos.length; i++) {
 				elementosNovos[i] = this.elementos[i];
 			}
