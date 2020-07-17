@@ -29,7 +29,12 @@ public class EstruturaEstatica<T> {
 	}
 
 	protected boolean adiciona(int posicao, T elemento) {
-		if (!(posicao >= 0 && posicao < tamanho)) {
+		// código invalido na aula 24# Filas com Prioridade
+//		if (!(posicao >= 0 && posicao < tamanho)) {
+//			throw new IllegalArgumentException("Posição inválida");
+//		}
+
+		if (posicao < 0 || posicao > tamanho) {
 			throw new IllegalArgumentException("Posição inválida");
 		}
 
