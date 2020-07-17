@@ -21,6 +21,18 @@ public class Aula24 {
 
 		System.out.println(fila);
 
+		FilaComPrioridade<Paciente> filaDePaciente = new FilaComPrioridade<>();
+
+		filaDePaciente.enfileira(new Paciente("A", 2));
+		filaDePaciente.enfileira(new Paciente("C", 1));
+		filaDePaciente.enfileira(new Paciente("B", 3));
+
+		System.out.println(filaDePaciente); // 1 2 3 e nao 1 3 2
+
+		System.out.println(filaDePaciente.desenfileira());
+
+		System.out.println(filaDePaciente);
+
 	}
 
 }
