@@ -12,4 +12,8 @@ public class Fila<T> extends EstruturaEstatica<T> {
 		super(capacidade);
 	}
 
+	public void enfileira(T elemento) {
+		this.adiciona(elemento);
+	}
+
 }
